@@ -12,6 +12,9 @@ export class EmployeeResponseDto {
   @Exclude()
   password: string;
   
+  @Exclude()
+  refreshToken: string;
+  
   gender: string;
   religion: string;
   dob: Date;
