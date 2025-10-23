@@ -25,6 +25,25 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+This project includes a comprehensive logging system that tracks all API requests, responses, errors, and application events. See [LOGGING_GUIDE.md](./LOGGING_GUIDE.md) for detailed documentation.
+
+---
+
+## 📝 Table of Contents
+
+- [🚀 Quick Start](#project-setup)
+- [✨ Features](#project-features)
+- [📚 Documentation](#-documentation)
+  - [API & Authentication](#api--authentication-guides)
+  - [Logging System](#logging-system-documentation)
+- [📖 Logging System](#logging-system)
+- [🛠️ Development](#compile-and-run-the-project)
+- [🧪 Testing](#run-tests)
+- [🚀 Deployment](#deployment)
+- [📚 Resources](#resources)
+
+---
+
 ## Project setup
 
 ```bash
@@ -69,6 +88,76 @@ $ mau deploy
 ```
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+
+## ✨ Project Features
+
+### Core Functionality
+👥 **Employee Management API** - CRUD operations for employees  
+🔐 **JWT Authentication** - Login with access and refresh tokens  
+🔑 **API Key Authentication** - Server-to-server authentication  
+📊 **Comprehensive Logging** - Full request/response logging with file storage  
+🗄️ **TypeORM Integration** - PostgreSQL database with migrations  
+✅ **Input Validation** - DTOs with class-validator  
+🔒 **Security** - Password hashing, token management, sensitive data redaction  
+
+## 📚 Documentation
+
+> **📑 [Complete Documentation Index](./DOCUMENTATION_INDEX.md)** - Browse all documentation in one place  
+> **📁 [Documentation Structure](./DOCS_STRUCTURE.md)** - Visual overview of all docs and their relationships
+
+### API & Authentication Guides
+- 📖 [API Testing Guide](./API_TESTING_GUIDE.md) - How to test the APIs with examples
+- 🔐 [Authentication Summary](./AUTHENTICATION_SUMMARY.md) - JWT authentication system details
+- 🔑 [Server-to-Server API Guide](./SERVER_TO_SERVER_API_GUIDE.md) - API key authentication for external services
+- ⚡ [Quick Reference](./QUICK_REFERENCE.md) - Quick command reference
+
+### Logging System Documentation
+- 📊 **[Logging Guide](./LOGGING_GUIDE.md)** - Complete logging system reference (start here!)
+- 🚀 [Logging Quick Start](./LOGGING_QUICK_START.md) - Get started with logging in 5 minutes
+- 📝 [Log Examples](./LOG_EXAMPLES.md) - Real-world log output examples
+- 🏗️ [Logging Architecture](./LOGGING_ARCHITECTURE.md) - System architecture and diagrams
+- 📋 [Logging Implementation Summary](./LOGGING_IMPLEMENTATION_SUMMARY.md) - What was implemented and how
+
+## 📖 Logging System
+
+This application includes a **production-ready logging system** that provides:
+
+### Key Features
+
+✅ **Full HTTP logging** - Every request and response is logged  
+✅ **Color-coded console output** - Easy-to-read logs with different colors per level  
+✅ **File-based logs** - Organized by date and severity level  
+✅ **Automatic log rotation** - Old logs cleaned up after 30 days  
+✅ **Sensitive data redaction** - Passwords and tokens are automatically hidden  
+✅ **Service-level logs** - Important business events logged from services  
+✅ **Exception tracking** - All errors captured with stack traces
+
+### Log Directory Structure
+
+Logs are stored in the `logs/` directory with the following structure:
+```
+logs/
+├── 2025-10-23-error.log       # 🔴 Only ERROR logs
+├── 2025-10-23-warn.log        # 🟡 Only WARN logs
+├── 2025-10-23-info.log        # 🟢 Only INFO logs
+├── 2025-10-23-debug.log       # 🔵 Only DEBUG logs
+├── 2025-10-23-verbose.log     # 🟣 Only VERBOSE logs
+└── 2025-10-23-combined.log    # 📊 All logs combined
+```
+
+### 📖 Logging Documentation
+
+For complete logging system information, explore these guides:
+
+| Document | Description | Best For |
+|----------|-------------|----------|
+| **[Logging Guide](./LOGGING_GUIDE.md)** | Complete reference documentation | Understanding all features |
+| [Quick Start](./LOGGING_QUICK_START.md) | Get started quickly | First-time users |
+| [Log Examples](./LOG_EXAMPLES.md) | Real log output samples | Seeing what to expect |
+| [Architecture](./LOGGING_ARCHITECTURE.md) | System design & flow | Technical deep-dive |
+| [Implementation Summary](./LOGGING_IMPLEMENTATION_SUMMARY.md) | What was built | Overview of changes |
+
+**New to logging?** Start with the [Logging Quick Start Guide](./LOGGING_QUICK_START.md) →
 
 ## Resources
 

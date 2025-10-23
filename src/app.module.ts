@@ -3,6 +3,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { EmployeeModule } from './employee/employee.module';
 import { AuthModule } from './auth/auth.module';
+import { LoggerModule } from './common/logger/logger.module';
 import databaseConfig from './config/database.config';
 
 @Module({
@@ -22,6 +23,7 @@ import databaseConfig from './config/database.config';
         return dbConfig;
       },
     }),
+    LoggerModule,
     EmployeeModule,
     AuthModule,
   ],
